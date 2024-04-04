@@ -50,6 +50,15 @@ const Model = () => {
 		}
 	}, [size])
 
+	// plug
+	useEffect(() => {
+		setTimeout(() => {
+			document.getElementById('root').style.touchAction = 'auto'
+		}, 2000)
+	}, [])
+
+	//
+
 	useGSAP(() => {
 		gsap.to('#heading', {
 			y: 0,
@@ -87,13 +96,14 @@ const Model = () => {
 						<Canvas
 							className='w-full h-full'
 							style={{
-								position: 'static',
+								position: 'fixed',
 								top: 0,
 								bottom: 0,
 								left: 0,
 								right: 0,
 								overflow: 'hidden',
 							}}
+							eventSource={document.getElementById('root')}
 						>
 							<View.Port />
 						</Canvas>
