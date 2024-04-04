@@ -11,7 +11,7 @@ const HowItWorks = () => {
 		gsap.from('#chip', {
 			scrollTrigger: {
 				trigger: '#chip',
-				start: '20% bottom',
+				start: '20% top',
 			},
 			opacity: 0,
 			scale: 2,
@@ -28,7 +28,7 @@ const HowItWorks = () => {
 	}, [])
 
 	return (
-		<section className='common-padding'>
+		<section className='common-padding overflow-x-hidden'>
 			<div className='screen-max-width'>
 				<div id='chip' className='flex-center w-full my-20'>
 					<img src={chipImg} alt='chip' width={180} height={180} />
